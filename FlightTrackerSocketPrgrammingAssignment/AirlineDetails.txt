@@ -1,0 +1,8 @@
+Name          Destination Departure Time  Status
+AirMauritius  England     Mauritius 9:00  Takeoff
+Emirates      Mauritius   Dubai     8:30  Landing
+AirFrance     Mauritius   France    13:15 Delayed
+AirSeychelles Seychelles  Mauritius 15:30 Ontime
+Emirates      Dubai       Mauritius 19:30 Ontime
+Emirates      Dubai       Mauritius 17:30 Ontime
+AirMauritius  Germany     Mauritius 9:00  Takeoff

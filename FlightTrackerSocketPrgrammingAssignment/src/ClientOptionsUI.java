@@ -51,21 +51,26 @@ public class ClientOptionsUI extends JFrame {
 				new ClientCreateAccountUI().setVisible(true);
 			}
 		});
-		btnNewButton.setBorder(new LineBorder(Color.LIGHT_GRAY));
+		btnNewButton.setBorder(new LineBorder(Color.CYAN));
 		btnNewButton.setForeground(Color.LIGHT_GRAY);
 		btnNewButton.setBackground(Color.DARK_GRAY);
 		btnNewButton.setBounds(0, -4, 126, 339);
 		contentPane.add(btnNewButton);
 		
 		JButton btnEnterAirline = new JButton("Enter Airline");
-		btnEnterAirline.setBorder(new LineBorder(Color.LIGHT_GRAY));
+		btnEnterAirline.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) { //enter airline
+				new ClientSearchAirlineUI().setVisible(true);
+			}
+		});
+		btnEnterAirline.setBorder(new LineBorder(Color.CYAN));
 		btnEnterAirline.setForeground(Color.LIGHT_GRAY);
 		btnEnterAirline.setBackground(Color.DARK_GRAY);
 		btnEnterAirline.setBounds(124, -2, 134, 335);
 		contentPane.add(btnEnterAirline);
 		
 		JButton btnOnlineCheckin = new JButton("Online Checkin");
-		btnOnlineCheckin.setBorder(new LineBorder(Color.LIGHT_GRAY));
+		btnOnlineCheckin.setBorder(new LineBorder(Color.CYAN));
 		btnOnlineCheckin.setForeground(Color.LIGHT_GRAY);
 		btnOnlineCheckin.setBackground(Color.DARK_GRAY);
 		btnOnlineCheckin.addActionListener(new ActionListener() {
@@ -76,7 +81,7 @@ public class ClientOptionsUI extends JFrame {
 		contentPane.add(btnOnlineCheckin);
 		
 		JButton btnDeleteAccount = new JButton("Delete Account");
-		btnDeleteAccount.setBorder(new LineBorder(Color.LIGHT_GRAY));
+		btnDeleteAccount.setBorder(new LineBorder(Color.CYAN));
 		btnDeleteAccount.setForeground(Color.LIGHT_GRAY);
 		btnDeleteAccount.setBackground(Color.DARK_GRAY);
 		btnDeleteAccount.setBounds(378, -3, 134, 337);

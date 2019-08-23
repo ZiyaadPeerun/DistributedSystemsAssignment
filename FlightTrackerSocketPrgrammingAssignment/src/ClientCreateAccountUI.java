@@ -14,6 +14,7 @@ import java.awt.event.ActionEvent;
 import java.net.*
 ;
 import java.io.*;
+import java.awt.Font;
 public class ClientCreateAccountUI extends JFrame {
 ;
 	private JPanel contentPane;
@@ -55,58 +56,59 @@ public class ClientCreateAccountUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel label = new JLabel("Create Account");
-		label.setForeground(Color.LIGHT_GRAY);
-		label.setBounds(174, 11, 96, 36);
+		label.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		label.setForeground(Color.CYAN);
+		label.setBounds(162, 11, 140, 36);
 		contentPane.add(label);
 		
 		JLabel label_1 = new JLabel("Username");
 		label_1.setForeground(Color.LIGHT_GRAY);
-		label_1.setBounds(77, 64, 115, 48);
+		label_1.setBounds(87, 58, 115, 48);
 		contentPane.add(label_1);
 		
 		JLabel label_2 = new JLabel("Surname");
 		label_2.setForeground(Color.LIGHT_GRAY);
-		label_2.setBounds(76, 107, 81, 43);
+		label_2.setBounds(87, 107, 81, 43);
 		contentPane.add(label_2);
 		
 		JLabel label_3 = new JLabel("First name");
 		label_3.setForeground(Color.LIGHT_GRAY);
-		label_3.setBounds(76, 143, 81, 53);
+		label_3.setBounds(87, 143, 81, 53);
 		contentPane.add(label_3);
 		
 		JLabel label_4 = new JLabel("Age");
 		label_4.setForeground(Color.LIGHT_GRAY);
-		label_4.setBounds(77, 198, 59, 20);
+		label_4.setBounds(87, 198, 59, 20);
 		contentPane.add(label_4);
 		
 		JLabel label_5 = new JLabel("Nationality");
 		label_5.setForeground(Color.LIGHT_GRAY);
-		label_5.setBounds(72, 229, 96, 33);
+		label_5.setBounds(87, 229, 96, 33);
 		contentPane.add(label_5);
 		
 		textField = new JTextField();
 		textField.setColumns(10);
-		textField.setBounds(302, 78, 96, 20);
+		textField.setBounds(273, 72, 96, 20);
 		contentPane.add(textField);
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
-		textField_1.setBounds(302, 118, 96, 20);
+		textField_1.setBounds(273, 118, 96, 20);
 		contentPane.add(textField_1);
 		
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
-		textField_2.setBounds(302, 159, 96, 20);
+		textField_2.setBounds(273, 159, 96, 20);
 		contentPane.add(textField_2);
 		
 		textField_3 = new JTextField();
 		textField_3.setColumns(10);
-		textField_3.setBounds(302, 198, 96, 20);
+		textField_3.setBounds(273, 198, 96, 20);
 		contentPane.add(textField_3);
 		
 		textField_4 = new JTextField();
 		textField_4.setColumns(10);
-		textField_4.setBounds(302, 235, 96, 20);
+		textField_4.setBounds(273, 235, 96, 20);
 		contentPane.add(textField_4);
 		
 		JButton button = new JButton("Back");
@@ -117,7 +119,7 @@ public class ClientCreateAccountUI extends JFrame {
 		});
 		button.setForeground(Color.DARK_GRAY);
 		button.setBackground(Color.LIGHT_GRAY);
-		button.setBounds(100, 281, 115, 23);
+		button.setBounds(87, 281, 128, 23);
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("Create");
@@ -137,7 +139,7 @@ public class ClientCreateAccountUI extends JFrame {
 					DataOutputStream outToServer=new DataOutputStream(client1.getOutputStream());
 					BufferedReader inFromUser=new BufferedReader(new InputStreamReader(System.in));
 					
-					String str=un+"\t\t"+sn+"\t\t"+fn+"\t\t"+a+"\t\t"+n;	
+					String str="-"+un+"\t\t"+sn+"\t\t"+fn+"\t\t"+a+"\t\t"+n;	
 					outToServer.writeUTF(str); 
 					System.out.print("Waiting for server to process information...\n");
 					textField_5.setText(inFromServer.readUTF());
@@ -157,7 +159,7 @@ public class ClientCreateAccountUI extends JFrame {
 		});
 		button_1.setForeground(Color.DARK_GRAY);
 		button_1.setBackground(Color.LIGHT_GRAY);
-		button_1.setBounds(247, 281, 109, 23);
+		button_1.setBounds(241, 281, 128, 23);
 		contentPane.add(button_1);
 		
 		textField_5 = new JTextField();
