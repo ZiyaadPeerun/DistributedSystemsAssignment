@@ -124,27 +124,38 @@ public class ClientCreateAccountUI extends JFrame {
 		
 		JButton button_1 = new JButton("Create");
 		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { //create 
-				
+			public void actionPerformed(ActionEvent e) { 
+				//Create Account Functionality; Author: Ziyaad Peerun (1710898)
 				String un=textField.getText();
 				String sn=textField_1.getText();
 				String fn=textField_2.getText();
 				String a=textField_3.getText();
 				String n=textField_4.getText();
 				
+				//Instantiate a new object of class User
+				User user=new User(un,sn,fn,a,n);
+			
 				Socket client1;
 				try {
+					//Connect to server on port 1234; Change IpAddress if server resides on another computer
 					client1 = new Socket("127.0.0.1",1234);
 					DataInputStream inFromServer=new DataInputStream(client1.getInputStream());
 					DataOutputStream outToServer=new DataOutputStream(client1.getOutputStream());
-					BufferedReader inFromUser=new BufferedReader(new InputStreamReader(System.in));
 					
-					String str="-"+un+"\t\t"+sn+"\t\t"+fn+"\t\t"+a+"\t\t"+n;	
-					outToServer.writeUTF(str); 
+					//Send User details to server to process
+					String operation="c";
+					outToServer.writeUTF(operation); 
+					
+					//Serialize object to send to server
+					ObjectOutputStream outputSerialize=new ObjectOutputStream(outToServer);
+					outputSerialize.writeObject(user);
+					
 					System.out.print("Waiting for server to process information...\n");
+					
+					//Read response from server
 					textField_5.setText(inFromServer.readUTF());
 					
-					inFromUser.close();
+					//Close streams
 					outToServer.close();
 					client1.close();
 					

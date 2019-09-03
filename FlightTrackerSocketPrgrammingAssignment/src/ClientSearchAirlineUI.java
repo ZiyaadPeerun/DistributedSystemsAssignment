@@ -125,15 +125,18 @@ import java.io.*;
 		
 		JButton btnSearch = new JButton("Search");
 		btnSearch.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) { //search 
-				
+			public void actionPerformed(ActionEvent e) { 
+				//Search Airline Functionality; Author: Ziyaad Peerun (1710898)
 				try {
 					Socket client1=new Socket("127.0.0.1",1234);
 					DataInputStream inFromServer=new DataInputStream(client1.getInputStream());
 					DataOutputStream outToServer=new DataOutputStream(client1.getOutputStream());
 					String userInput=textField.getText();
-					outToServer.writeUTF("#"+userInput); 
+					outToServer.writeUTF("s"+userInput); 
+					
 					System.out.print("Waiting for server to process information...\n");
+					
+					//Read and display response from server
 					String strServer=inFromServer.readUTF();
 					String[] strValue=strServer.split(" ");
 					textField_1.setText(strValue[0]);

@@ -75,12 +75,19 @@ public class ClientOptionsUI extends JFrame {
 		btnOnlineCheckin.setBackground(Color.DARK_GRAY);
 		btnOnlineCheckin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				new ClientUpdateUI().setVisible(true);
 			}
 		});
 		btnOnlineCheckin.setBounds(251, -3, 134, 337);
 		contentPane.add(btnOnlineCheckin);
 		
 		JButton btnDeleteAccount = new JButton("Delete Account");
+		btnDeleteAccount.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new ClientDeleteUsernameUI().setVisible(true);
+			}
+		});
 		btnDeleteAccount.setBorder(new LineBorder(Color.CYAN));
 		btnDeleteAccount.setForeground(Color.LIGHT_GRAY);
 		btnDeleteAccount.setBackground(Color.DARK_GRAY);

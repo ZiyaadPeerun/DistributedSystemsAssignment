@@ -1,5 +1,5 @@
 Username        Surname         Firstname       Age            Nationality
-
-
--Zi		Peerun		Ziyaad		21		Mauritian
--Nam		Bhugalee	Nameera		21		Mauritian
+Zi		Peerun		 Ziyaad	         21	      	Mauritian
+Nam	       Bhugalee	         Nameera	 21	     	Mauritian
+John		John1		uyug		juy		yuu 
+Tom		Hanks		Tommy		55		USA 

@@ -1,0 +1,8 @@
+Username	Surname		Age		FlightId	Passport number	Status
+Zi		Peerun		Mru		111		1234		CheckedIn
+Nam		Bhugal		Mru		112		1235		Pending
+Zah		Peerun		Mru		113		1236		Pending
+Noum		Hanks		USA		114		1237		Pending
+John		Doe		USA		115		1238		Pending
+Tom		Cruise		USA		116		1239		Pending
+Leo		Dicap		USA		117		1233		CheckedIn
